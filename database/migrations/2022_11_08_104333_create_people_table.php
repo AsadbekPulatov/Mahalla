@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('lastname');
             $table->string('fathername');
             $table->date('birthdate');
+            $table->string('address');
             $table->integer("dead_date");
             $table->string('passport');
             $table->timestamps();

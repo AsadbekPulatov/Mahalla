@@ -77,6 +77,12 @@
                     <div data-i18n="Analytics">Fuqarolar</div>
                 </a>
             </li>
+        <li class="menu-item {{  request()->routeIs('statistic') ? 'active' : '' }}">
+                <a href="{{route('statistic')}}" class="menu-link">
+                    <i class="menu-icon tf-icons fas fa-university"></i>
+                    <div data-i18n="Analytics">Statistika</div>
+                </a>
+            </li>
 {{--            <li class="menu-item {{  request()->routeIs('admin.facultets.index') ? 'active' : '' }}">--}}
 {{--                <a href="{{ route('admin.facultets.index') }}" class="menu-link">--}}
 {{--                    <i class="menu-icon tf-icons fas fa-building"></i>--}}

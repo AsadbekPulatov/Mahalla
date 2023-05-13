@@ -22,6 +22,7 @@
             <th scope="col">Otasining Ismi</th>
             <th scope="col">Tug'ilgan yili</th>
             <th scope="col">Passport</th>
+            <th scope="col">Address</th>
             <th scope="col">Amallar</th>
         </tr>
         </thead>
@@ -34,6 +35,7 @@
             <td>{{$people->fathername}}</td>
             <td>{{$people->birthdate}}</td>
             <td>{{$people->passport}}</td>
+            <td>{{$people->address}}</td>
             <td class="">
 
 

@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 //});
 
 Route::get('/',[\App\Http\Controllers\StatisticController::class, 'index']);
+Route::get('/statistic',[\App\Http\Controllers\StatisticController::class, 'index'])->name('statistic');
 Route::get('/dashboard', function () {
     return view('admin.dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

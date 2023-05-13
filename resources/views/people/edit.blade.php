@@ -22,6 +22,11 @@
 
                 </div>
                 <div class="mb-3">
+                    <label for="address" class="form-label">Address</label>
+                    <input type="text" class="form-control" id="address" value="{{$people->address}}" name="address" required>
+
+                </div>
+                <div class="mb-3">
                     <label for="birthdate" class="form-label">Tug'ilgan yili</label>
                     <input type="date" class="form-control"  id="birthdate" value="{{$people->birthdate}}"  name="birthdate" required>
 

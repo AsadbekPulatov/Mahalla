@@ -39,12 +39,14 @@ class PeopleController extends Controller
      */
     public function store(Request $request)
     {
+//        dd($request);
        $peoples= $request->validate([
             'firstname'=>'required',
             'lastname'=>'required',
             'fathername'=>'required',
             'birthdate'=>'required',
-            'passport'=>'required'
+            'passport'=>'required',
+           'address'=>'required',
         ]);
         $show=People::create($peoples);
 
@@ -52,6 +54,7 @@ class PeopleController extends Controller
     $status=new PeopleStatus();
     $status->people_id = $show['id'];
     $status->status_id=$q;
+
 $status->save();
         }
 //        dd($status);
@@ -107,7 +110,9 @@ $status->save();
             'lastname'=>'required',
             'fathername'=>'required',
             'birthdate'=>'required',
-            'passport'=>'required'
+            'address'=>'address',
+            'passport'=>'required',
+            'address'=>'required',
         ]);
         $show=People::find($id);
         $show->firstname=$request['firstname'];
@@ -115,6 +120,7 @@ $status->save();
         $show->fathername=$request['fathername'];
         $show->birthdate=$request['birthdate'];
         $show->passport=$request['passport'];
+        $show->address=$request['address'];
         $show->save();
 
         foreach ($request->status as $k=>$q) {

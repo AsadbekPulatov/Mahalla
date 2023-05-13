@@ -11,6 +11,6 @@ class People extends Model
     protected $attributes = [
       'dead_date' => 0,
     ];
-    protected $fillable=['firstname','lastname','fathername','birthdate','passport'];
+    protected $fillable=['firstname','lastname','fathername','birthdate','passport','address'];
 
 }
